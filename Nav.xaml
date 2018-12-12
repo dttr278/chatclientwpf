@@ -1,0 +1,58 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:chatClient"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="chatClient.Nav"
+        mc:Ignorable="d"
+        Title="Contact" Height="600" Width="285">
+    <Grid  Background="#FFE5E5E5">
+        <Grid x:Name="navHeader" Height="50" VerticalAlignment="Top" Background="AliceBlue">
+            <!--<Border BorderThickness="1" BorderBrush="Black" CornerRadius="20,20,20,20" HorizontalAlignment="Left" Background="Aquamarine" Height="40" Width="40"  Margin="5,0,0,0">-->
+                <Image x:Name="userAvatar" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="5,5,0,0" Stretch="Fill">
+                    <Image.Clip>
+                        <EllipseGeometry Center="20,20" RadiusX="20" RadiusY="20" />
+                    </Image.Clip>
+                </Image>
+            <!--</Border>-->
+            <TextBlock FontSize="12" FontWeight="Bold" x:Name="tbName" HorizontalAlignment="Left" Margin="50,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="168"/>
+            <TextBlock FontSize="10" x:Name="tbUserName" HorizontalAlignment="Left" Margin="50,26,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="168"/>
+            <TextBlock HorizontalAlignment="Left" Margin="218,23,0,0" TextWrapping="Wrap"  VerticalAlignment="Top">
+                <Hyperlink NavigateUri="#" Click="Hyperlink_Click">
+                    <TextBlock Text="Logout"></TextBlock>
+                </Hyperlink>
+            </TextBlock>
+
+        </Grid>
+        <TabControl Margin="0,50,0,0">
+            <TabItem Header="Chat">
+                <Grid Background="Aquamarine">
+                    <TextBox Height="20" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <ListView x:Name="chatList" Margin="0,25,0,0"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Group">
+                <Grid Background="Aquamarine">
+                    <TextBox Height="20" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <ListView x:Name="groupList" Margin="0,25,0,0"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Contact">
+                <Grid Background="Aquamarine">
+                    <TextBox Height="20" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <ListView x:Name="contactList" Margin="0,25,0,0"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Search">
+                <Grid Background="Aquamarine">
+                    <TextBox Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,0,40,0"/>
+                    <Button Content="Tìm" VerticalAlignment="Top" Height="20" HorizontalAlignment="Right" Width="35"/>
+                    <ListView x:Name="searchList" Margin="0,25,0,0"/>
+                </Grid>
+
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</Window>

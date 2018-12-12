@@ -1,0 +1,50 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:chatClient"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="chatClient.MainWindow"
+        mc:Ignorable="d"
+        Title="Login" Height="600" Width="285">
+    <Grid>
+        <Grid Visibility="Visible" x:Name="grSignin">
+            <TextBox x:Name="txbUsername" HorizontalAlignment="Left" Height="22" Margin="17,210,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="237"/>
+            <PasswordBox x:Name="txbPassword" HorizontalAlignment="Left" Margin="17,236,0,0" VerticalAlignment="Top" Width="237" Height="20"/>
+            <Button x:Name="btnSignin" Content="SignIn" HorizontalAlignment="Left" Margin="170,260,0,0" VerticalAlignment="Top" Width="84" Click="btnSignin_Click"/>
+            <TextBlock Margin="17,260,210,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="22">
+                <Hyperlink Name="linkToSignup" Click="linkToSignup_Click" >
+                  sign up
+                </Hyperlink>
+            </TextBlock>
+        </Grid>
+        <Grid>
+
+        </Grid>
+        <Grid Visibility="Hidden" x:Name="grSignup">
+            <TextBox HorizontalAlignment="Left" Height="24" Margin="72,110,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="138"/>
+            <PasswordBox HorizontalAlignment="Left" Height="24" Margin="72,161,0,0" VerticalAlignment="Top" Width="138"/>
+            <PasswordBox HorizontalAlignment="Left" Height="24" Margin="72,212,0,0" VerticalAlignment="Top" Width="138"/>
+            <TextBox HorizontalAlignment="Left" Height="24" Margin="72,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+            <TextBox HorizontalAlignment="Left" Height="24" Margin="72,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+            <RadioButton Content="Nam" HorizontalAlignment="Left" Margin="73,349,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.529,-0.746" GroupName="sex"/>
+            <RadioButton Content="Nữ" HorizontalAlignment="Left" Margin="121,349,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.529,-0.746" GroupName="sex"/>
+            <Button Content="sign up" HorizontalAlignment="Left" Margin="152,379,0,0" VerticalAlignment="Top" Width="66"/>
+            <TextBlock HorizontalAlignment="Left" Margin="73,385,0,0" TextWrapping="Wrap"  VerticalAlignment="Top">
+                <Hyperlink Name="linkToSignin" Click="linkToSignin_Click">
+                    back to signin
+                </Hyperlink>
+            </TextBlock>
+            <Label Content="username:" HorizontalAlignment="Left" Margin="72,88,0,0" VerticalAlignment="Top" Width="138" />
+            <Label Content="password:" HorizontalAlignment="Left" Margin="72,139,0,0" VerticalAlignment="Top" Width="138"/>
+            <Label Content="repassword:" HorizontalAlignment="Left" Margin="72,190,0,0" VerticalAlignment="Top" Width="138"/>
+            <Label Content="email:" HorizontalAlignment="Left" Margin="72,241,0,0" VerticalAlignment="Top" Width="138"/>
+            <Label Content="name:" HorizontalAlignment="Left" Margin="72,293,0,0" VerticalAlignment="Top" Width="138"/>
+
+        </Grid>
+
+
+
+    </Grid>
+
+</Window>
